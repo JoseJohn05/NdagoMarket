@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Profile - Seller Dashboard | Ndago Market</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span class="text-primary-custom">Market</span>
+        </a>
+        <div class="d-flex align-items-center gap-3">
+            <a href="add-product.html" class="btn btn-primary-custom btn-sm d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Add Product</a>
+            <div class="d-flex align-items-center gap-2">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:36px;height:36px;">G</div>
+                <span class="d-none d-sm-inline small fw-medium">GreenFarm</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <div class="row g-4">
+        <div class="col-lg-3">
+            <div class="card border-0 shadow-sm sticky-top" style="top:80px;">
+                <div class="list-group list-group-flush">
+                    <a href="seller-dashboard.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-house me-2"></i> Dashboard</a>
+                    <a href="products.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-box me-2"></i> My Products</a>
+                    <a href="add-product.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-plus-circle me-2"></i> Add Product</a>
+                    <a href="seller-orders.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-receipt me-2"></i> Orders</a>
+                    <a href="shop-profile.html" class="list-group-item list-group-item-action sidebar-link active border-0"><i class="bi bi-person me-2"></i> Shop Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <h1 class="h4 fw-bold mb-1">Shop Profile</h1>
+            <p class="text-muted small mb-4">Manage how your shop appears to customers</p>
+
+            <form>
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">Shop Appearance</h6>
+                        <div class="mb-4">
+                            <label class="form-label">Shop Logo</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold fs-3" style="width:80px;height:80px;">G</div>
+                                <button type="button" class="btn btn-outline-secondary btn-sm">Change Logo</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label">Cover Banner</label>
+                            <div class="border border-2 border-dashed rounded-3 p-4 text-center text-muted">
+                                Click to upload banner image<br><small>Recommended: 1200 × 300px</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">Basic Information</h6>
+                        <div class="mb-3">
+                            <label class="form-label">Shop Name *</label>
+                            <input type="text" class="form-control" value="GreenFarm">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Shop Description</label>
+                            <textarea class="form-control" rows="3">We are a family-owned farm in Lilongwe supplying fresh organic vegetables, fruits and grains. All produce is harvested daily for maximum freshness.</textarea>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" value="0888 555 123">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">WhatsApp Number</label>
+                                <input type="tel" class="form-control" value="0888 555 123">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" value="greenfarm@email.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">Location</h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">District *</label>
+                                <select class="form-select">
+                                    <option selected>Lilongwe</option>
+                                    <option>Blantyre</option>
+                                    <option>Mzuzu</option>
+                                    <option>Zomba</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Area / Address</label>
+                                <input type="text" class="form-control" value="Area 25, Near the market">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">Business Hours</h6>
+                        <div class="row g-2 align-items-center mb-2">
+                            <div class="col-5">Monday - Friday</div>
+                            <div class="col-7"><input type="text" class="form-control form-control-sm" value="07:00 - 17:00"></div>
+                        </div>
+                        <div class="row g-2 align-items-center mb-2">
+                            <div class="col-5">Saturday</div>
+                            <div class="col-7"><input type="text" class="form-control form-control-sm" value="07:00 - 14:00"></div>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                            <div class="col-5">Sunday</div>
+                            <div class="col-7"><input type="text" class="form-control form-control-sm" value="Closed"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary-custom">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/storage.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/utils.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

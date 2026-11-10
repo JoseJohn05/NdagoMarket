@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Organic Tomatoes (5kg) - Ndago Market</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span class="text-primary-custom">Market</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="seller/seller-dashboard.html"><i class="bi bi-shop"></i> Sell</a></li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="cart.html">
+                        <i class="bi bi-cart3 fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="btn btn-primary-custom btn-sm px-3" href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+            <li class="breadcrumb-item"><a href="category.html" class="text-decoration-none text-muted">Agriculture</a></li>
+            <li class="breadcrumb-item active">Fresh Organic Tomatoes (5kg)</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="container pb-5">
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="bg-white rounded-3 border p-2 mb-3">
+                <img id="mainImage" src="assets/imgs/placeholder.svg" class="img-fluid rounded-2 w-100" style="aspect-ratio:1;object-fit:cover;" alt="Product">
+            </div>
+            <div class="row g-2">
+                <div class="col-3"><img src="assets/imgs/placeholder.svg" class="img-fluid rounded-2 border border-2 border-success thumb-img active" alt="Product thumbnail"></div>
+                <div class="col-3"><img src="assets/imgs/placeholder.svg" class="img-fluid rounded-2 border thumb-img" alt="Product thumbnail"></div>
+                <div class="col-3"><img src="assets/imgs/placeholder.svg" class="img-fluid rounded-2 border thumb-img" alt="Product thumbnail"></div>
+                <div class="col-3"><img src="assets/imgs/placeholder.svg" class="img-fluid rounded-2 border thumb-img" alt="Product thumbnail"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <span class="badge bg-success mb-2" id="productStatus">In Stock</span>
+            <span class="text-muted small ms-2" id="productCategory">Agriculture</span>
+            <h1 class="h3 fw-bold mb-2" id="productName">Fresh Organic Tomatoes (5kg)</h1>
+            <div class="mb-3">
+                <span class="text-warning">★★★★★</span>
+                <span class="text-muted small ms-1">(24 reviews)</span>
+            </div>
+            <div class="mb-3">
+                <span class="fs-3 fw-bold text-primary-custom" id="productPrice">MWK 4,500</span>
+                <span class="text-muted text-decoration-line-through ms-2">MK 5,200</span>
+                <span class="badge bg-success-subtle text-success ms-2">Save 13%</span>
+            </div>
+            <p class="text-muted" id="productDescription">Freshly harvested organic tomatoes from local farms in Lilongwe.</p>
+
+            <div class="bg-light rounded-3 p-3 mb-4 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px;">G</div>
+                    <div>
+                        <div class="fw-semibold" id="productSeller">GreenFarm</div>
+                        <small class="text-muted">Lilongwe • 4.8 ★ (128 sales)</small>
+                    </div>
+                </div>
+                <a href="seller/shop.html" id="productShopLink" class="btn btn-sm btn-outline-success">View Shop</a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <div class="input-group" style="width:130px;">
+                    <button class="btn btn-outline-secondary" type="button" data-product-quantity="-1">−</button>
+                    <input type="number" id="productQuantity" class="form-control text-center" value="1" min="1">
+                    <button class="btn btn-outline-secondary" type="button" data-product-quantity="1">+</button>
+                </div>
+                <button class="btn btn-primary-custom flex-grow-1" id="addProductToCart"><i class="bi bi-cart-plus me-1"></i> Add to Cart</button>
+                <button class="btn btn-success" type="button" id="buyNowProduct">Buy Now</button>
+                <a href="#" id="sellerPhoneLink" class="btn btn-outline-success">Call Seller</a>
+                <a href="#" id="sellerWhatsappLink" class="btn btn-outline-success">WhatsApp</a>
+            </div>
+
+            <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><i class="bi bi-geo-alt text-success me-2"></i>Location: <span id="productDistrict">Malawi</span></li>
+                <li class="mb-2"><i class="bi bi-calendar3 text-success me-2"></i>Posted: <span id="productDate">-</span></li>
+                <li><i class="bi bi-truck text-success me-2"></i>Delivery available in Lilongwe</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="mt-5">
+        <h2 class="h5 fw-bold mb-3">Related Products</h2>
+        <div class="row g-3" id="relatedProducts"></div>
+    </section>
+
+    <div class="card border-0 shadow-sm mt-5">
+        <div class="card-header bg-white">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item"><a class="nav-link active" href="#">Description</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Reviews (24)</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Seller Info</a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <p id="productDescriptionLong">These tomatoes are grown using organic methods without chemical pesticides.</p>
+            <ul>
+                <li>Variety: Roma & Hybrid</li>
+                <li>Weight: 5kg net</li>
+                <li>Best consumed within 5–7 days</li>
+                <li>Available for bulk orders (contact seller)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4"><h5 class="fw-bold">Ndago Market</h5><p class="small text-secondary">Malawi’s local online marketplace.</p></div>
+            <div class="col-6 col-md-2"><h6>Shop</h6><ul class="list-unstyled small"><li><a href="category.html" class="text-secondary text-decoration-none">Categories</a></li></ul></div>
+            <div class="col-6 col-md-2"><h6>Sell</h6><ul class="list-unstyled small"><li><a href="seller/seller-dashboard.html" class="text-secondary text-decoration-none">Dashboard</a></li></ul></div>
+            <div class="col-md-4"><h6>Support</h6><ul class="list-unstyled small"><li><a href="index.html#support" class="text-secondary text-decoration-none">Help Center</a></li></ul></div>
+        </div>
+        <hr class="border-secondary my-4">
+        <p class="text-center text-secondary small mb-0">© 2026 Ndago Market. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/marketplace.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/product.js"></script>
+</body>
+</html>

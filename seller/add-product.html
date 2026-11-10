@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Ndago Market</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span class="text-primary-custom">Market</span>
+        </a>
+        <div class="d-flex align-items-center gap-3">
+            <a href="seller-dashboard.html" class="btn btn-outline-secondary btn-sm">← Back to Dashboard</a>
+            <div class="d-flex align-items-center gap-2">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:36px;height:36px;">G</div>
+                <span class="d-none d-sm-inline small fw-medium">GreenFarm</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4" style="max-width:720px;">
+    <div class="mb-4">
+        <h1 class="h4 fw-bold">Add New Product</h1>
+        <p class="text-muted small">Fill in the details below to list your product on Ndago Market</p>
+    </div>
+
+    <form class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <!-- Images -->
+            <div class="mb-4">
+                <label class="form-label fw-medium">Product Images</label>
+                <div class="upload-zone rounded-3 p-5 text-center">
+                    <i class="bi bi-image fs-1 text-muted"></i>
+                    <p class="mb-1 mt-2">Click to upload or drag and drop</p>
+                    <p class="small text-muted mb-0">PNG, JPG up to 5MB (max 5 images)</p>
+                    <input type="file" class="d-none" multiple accept="image/*">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-medium">Product Title *</label>
+                <input type="text" class="form-control" placeholder="e.g. Fresh Organic Tomatoes (5kg)" required>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">Category *</label>
+                    <select class="form-select" required>
+                        <option value="">Select category</option>
+                        <option>Agriculture</option>
+                        <option>Clothes</option>
+                        <option>Electronics</option>
+                        <option>Furniture</option>
+                        <option>Building Materials</option>
+                        <option>Beauty</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">Condition</label>
+                    <select class="form-select">
+                        <option>New / Fresh</option>
+                        <option>Used - Like New</option>
+                        <option>Used - Good</option>
+                        <option>Used - Fair</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-medium">Description *</label>
+                <textarea class="form-control" rows="4" placeholder="Describe your product in detail..." required></textarea>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <label class="form-label fw-medium">Price (MK) *</label>
+                    <input type="number" class="form-control" placeholder="4500" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-medium">Compare at Price</label>
+                    <input type="number" class="form-control" placeholder="5200 (optional)">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-medium">Stock Quantity *</label>
+                    <input type="number" class="form-control" placeholder="50" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">District *</label>
+                    <select class="form-select" required>
+                        <option value="">Select district</option>
+                        <option>Lilongwe</option>
+                        <option>Blantyre</option>
+                        <option>Mzuzu</option>
+                        <option>Zomba</option>
+                        <option>Kasungu</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">Area / Location</label>
+                    <input type="text" class="form-control" placeholder="e.g. Area 25, City Centre">
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-medium">Delivery Options</label>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d1" checked><label class="form-check-label" for="d1">Buyer can pick up</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d2" checked><label class="form-check-label" for="d2">I can deliver (within my district)</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d3"><label class="form-check-label" for="d3">I can deliver nationwide</label></div>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary-custom flex-grow-1 py-2">Publish Product</button>
+                <button type="button" class="btn btn-outline-secondary flex-grow-1 py-2">Save as Draft</button>
+            </div>
+        </div>
+    </form>
+</main>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/storage.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/utils.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

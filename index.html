@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy & Sell Locally | Ndago Market</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span>Market</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <form class="d-flex mx-auto my-2 my-lg-0" style="max-width:400px;width:100%;" data-marketplace-search>
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Search products, shops...">
+                    <button class="btn btn-primary-custom" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="seller/add-product.html"><i class="bi bi-shop"></i> Sell</a></li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="cart.html">
+                        <i class="bi bi-cart3 fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" data-cart-count>0</span>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="btn btn-primary-custom btn-sm px-3" href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- =====================================
+     NDAGO MARKET - HERO SECTION
+====================================== -->
+
+<section class="hero-section">
+
+    <div class="container hero-container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT: HERO CONTENT -->
+            <div class="col-lg-6">
+
+                <div class="hero-content">
+
+                    <div class="hero-eyebrow">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Malawi's local marketplace
+                    </div>
+
+                    <h1 class="hero-title">
+                        Your Market.
+                        <span>Your People.</span>
+                        <span class="hero-title-accent">
+                            All in One Place.
+                        </span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover amazing products from local businesses
+                        across Malawi. From fresh agricultural produce
+                        and fashion to electronics, furniture and building
+                        materials, Ndago Market brings buyers and sellers
+                        closer together.
+                    </p>
+
+                    <!-- ACTION BUTTONS -->
+                    <div class="hero-actions">
+
+                        <a href="#categories"
+                           class="btn hero-btn-primary">
+
+                            Explore Marketplace
+                            <i class="bi bi-arrow-right ms-2"></i>
+
+                        </a>
+
+                        <a href="register.html"
+                           class="btn hero-btn-outline">
+
+                            <i class="bi bi-shop me-2"></i>
+                            Become a Seller
+
+                        </a>
+
+                    </div>
+
+                    <!-- TRUST INDICATOR -->
+                    <div class="hero-trust">
+
+                        <div class="trust-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Built around local businesses</strong>
+                            <small>
+                                Seller applications reviewed by Ndago Market
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: IMAGE + STATISTICS -->
+            <div class="col-lg-6">
+
+                <div class="hero-visual">
+
+                    <!-- MAIN IMAGE -->
+                    <div class="hero-image-wrapper">
+
+                        <img
+                            src="assets/imgs/banners/Fresh-Products.jpg"
+                            alt="Fresh produce displayed at a local marketplace"
+                            class="hero-image"
+                        >
+
+                        <div class="hero-image-overlay"></div>
+
+                        <!-- IMAGE LABEL -->
+                        <div class="hero-image-label">
+
+                            <span class="hero-live-dot"></span>
+
+                            <div>
+                                <strong>Shop Local</strong>
+                                <small>Discover businesses across Malawi</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOATING STATISTICS -->
+                    <div class="hero-stats">
+
+                        <div class="hero-stat-card">
+
+                            <div class="hero-stat-icon icon-green">
+                                <i class="bi bi-shop"></i>
+                            </div>
+
+                            <div>
+                                <h5>Local Sellers</h5>
+                                <p>Businesses of all sizes</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-stat-card">
+
+                            <div class="hero-stat-icon icon-orange">
+                                <i class="bi bi-bag-check"></i>
+                            </div>
+
+                            <div>
+                                <h5>Two Ways to Buy</h5>
+                                <p>Enquire or order online</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-stat-card">
+
+                            <div class="hero-stat-icon icon-yellow">
+                                <i class="bi bi-truck"></i>
+                            </div>
+
+                            <div>
+                                <h5>Flexible Delivery</h5>
+                                <p>Seller or Ndago delivery</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-stat-card">
+
+                            <div class="hero-stat-icon icon-dark">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+
+                            <div>
+                                <h5>Nationwide</h5>
+                                <p>Connecting Malawi</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- END HERO SECTION -->
+
+<section id="categories" class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h4 fw-bold mb-0">Shop by Category</h2>
+            <a href="category.html" class="btn btn-success text-white text-decoration-none rounded-5">View all →</a>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="category.html?category=Agriculture" class="card category-card text-center text-decoration-none h-100 border-0 shadow-sm">
+                    <div class="card-body"><div class="fs-1 mb-2">🌾</div><h6 class="card-title text-dark mb-1">Agriculture</h6><small class="text-muted">Maize, vegetables</small></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="category.html?category=Clothing" class="card category-card text-center text-decoration-none h-100 border-0 shadow-sm">
+                    <div class="card-body"><div class="fs-1 mb-2">👕</div><h6 class="card-title text-dark mb-1">Clothes</h6><small class="text-muted">Fashion & apparel</small></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="category.html?category=Electronics" class="card category-card text-center text-decoration-none h-100 border-0 shadow-sm">
+                    <div class="card-body"><div class="fs-1 mb-2">📱</div><h6 class="card-title text-dark mb-1">Electronics</h6><small class="text-muted">Phones, gadgets</small></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="category.html?category=Furniture" class="card category-card text-center text-decoration-none h-100 border-0 shadow-sm">
+                    <div class="card-body"><div class="fs-1 mb-2">🛋️</div><h6 class="card-title text-dark mb-1">Furniture</h6><small class="text-muted">Home & office</small></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="category.html?category=Building%20Materials" class="card category-card text-center text-decoration-none h-100 border-0 shadow-sm">
+                    <div class="card-body"><div class="fs-1 mb-2">🧱</div><h6 class="card-title text-dark mb-1">Building</h6><small class="text-muted">Materials & tools</small></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="category.html?category=Beauty%20%26%20Cosmetics" class="card category-card text-center text-decoration-none h-100 border-0 shadow-sm">
+                    <div class="card-body"><div class="fs-1 mb-2">🧴</div><h6 class="card-title text-dark mb-1">Beauty</h6><small class="text-muted">Cosmetics & care</small></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h4 fw-bold mb-0">Featured Products</h2>
+            <a href="category.html" class="btn btn-success text-white text-decoration-none rounded-5">See more →</a>
+        </div>
+        <div class="row g-3 g-md-4" id="featuredProducts">
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=400&fit=crop" class="card-img-top" alt="Tomatoes">
+                    <div class="card-body">
+                        <small class="text-muted">Agriculture</small>
+                        <h6 class="card-title text-dark mb-1">Fresh Organic Tomatoes (5kg)</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 4,500</p>
+                        <small class="text-muted">Lilongwe • GreenFarm</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" class="card-img-top" alt="Shirt">
+                    <div class="card-body">
+                        <small class="text-muted">Clothes</small>
+                        <h6 class="card-title text-dark mb-1">Classic Cotton Shirt - White</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 12,000</p>
+                        <small class="text-muted">Blantyre • StyleHub</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop" class="card-img-top" alt="Phone">
+                    <div class="card-body">
+                        <small class="text-muted">Electronics</small>
+                        <h6 class="card-title text-dark mb-1">Samsung Galaxy A15 128GB</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 185,000</p>
+                        <small class="text-muted">Lilongwe • TechZone</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop" class="card-img-top" alt="Sofa">
+                    <div class="card-body">
+                        <small class="text-muted">Furniture</small>
+                        <h6 class="card-title text-dark mb-1">3-Seater Fabric Sofa - Grey</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 320,000</p>
+                        <small class="text-muted">Mzuzu • HomeComfort</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=400&fit=crop" class="card-img-top" alt="Cement">
+                    <div class="card-body">
+                        <small class="text-muted">Building</small>
+                        <h6 class="card-title text-dark mb-1">Portland Cement 50kg Bag</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 18,500</p>
+                        <small class="text-muted">Lilongwe • BuildMart</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop" class="card-img-top" alt="Beauty">
+                    <div class="card-body">
+                        <small class="text-muted">Beauty</small>
+                        <h6 class="card-title text-dark mb-1">Natural Shea Butter Set</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 7,800</p>
+                        <small class="text-muted">Zomba • NatureGlow</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400&h=400&fit=crop" class="card-img-top" alt="Maize">
+                    <div class="card-body">
+                        <small class="text-muted">Agriculture</small>
+                        <h6 class="card-title text-dark mb-1">White Maize Grain - 50kg</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 45,000</p>
+                        <small class="text-muted">Kasungu • AgroSupply</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="product.html" class="card product-card h-100 border-0 shadow-sm text-decoration-none">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" class="card-img-top" alt="Sneakers">
+                    <div class="card-body">
+                        <small class="text-muted">Clothes</small>
+                        <h6 class="card-title text-dark mb-1">Running Sneakers - Black</h6>
+                        <p class="text-primary-custom fw-bold mb-1">MK 28,500</p>
+                        <small class="text-muted">Blantyre • FootStyle</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="h4 fw-bold mb-4">Popular Sellers</h2>
+        <div class="row g-3" id="popularSellers"></div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h4 fw-bold mb-0">Recently Added</h2>
+            <a href="category.html" class="btn btn-success text-white rounded-5">View all</a>
+        </div>
+        <div class="row g-3 g-md-4" id="recentProducts"></div>
+    </div>
+</section>
+
+<section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+        <h2 class="h4 fw-bold text-center mb-5">How Ndago Market Works</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;"><span class="fs-4 fw-bold">1</span></div>
+                <h5>Browse or Search</h5>
+                <p class="text-muted small">Find products from trusted local sellers across all major categories.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;"><span class="fs-4 fw-bold">2</span></div>
+                <h5>Contact or Order</h5>
+                <p class="text-muted small">Message the seller or place an order. Many offer delivery or pickup.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:64px;height:64px;"><span class="fs-4 fw-bold">3</span></div>
+                <h5>Receive & Pay</h5>
+                <p class="text-muted small">Get your items and pay securely — cash, mobile money or bank transfer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="bg-primary-custom text-white rounded-4 p-5 text-center">
+            <h2 class="h3 fw-bold mb-2">Ready to start selling?</h2>
+            <p class="mb-4 opacity-75">Join thousands of sellers already reaching customers across Malawi. It's free to list your products.</p>
+            <a href="register.html" class="btn btn-light btn-lg">Create Seller Account</a>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="bg-success text-white rounded-4 p-5 text-center">
+            <h2 class="h3 fw-bold mb-2">Contact Us</h2>
+            <p class="mb-4 opacity-75">
+                📞 Phone: 0984789411 <br/>
+                💬 Whatsapp: 0889369052 <br/>
+                📧 Email: ndagosupport@gmail.com
+            </p>
+            <p class="mb-4 opacity-75">For more detailed information please visit our headquaters in the following locations: <br/>
+            Lilongwe: Along the road going to BICC <br/> 
+            Blantyre: Limbe, Phalombe Hardware, Third Floor Room number 22</p>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold">Ndago <span class="text-success">Market</span></h5>
+                <p class="text-secondary">Connecting local businesses and customers nation-wide through an online marketplace</p>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h6>Marketplace</h6>
+                <a href="index.html" class="footer-link">Home</a>
+                 <a href="product.html" class="footer-link">Products</a>
+                  <a href="cart.html" class="footer-link">Shopping cart</a>
+            </div>
+
+            <div class="col-lg-4">
+                <h6>Customer Support</h6>
+                <a href="#" class="footer-link">Help Centre</a>
+                <a href="#" class="footer-link">Terms and Conditions</a>
+            </div>
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <p class="text-center text-secondary small mb-0">
+            &copy;2026 Ndago Market. All rights reserved.
+        </p>
+        <div class="text-center mt-2">
+            <button type="button" class="btn btn-link btn-sm text-secondary" data-reset-demo>Reset demonstration data</button>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/marketplace.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+    NdagoData.initialize();
+    NdagoMarketplace.renderFeatured("featuredProducts");
+    NdagoMarketplace.renderRecent("recentProducts");
+    NdagoMarketplace.renderSellers("popularSellers");
+</script>
+
+</body>
+</html>

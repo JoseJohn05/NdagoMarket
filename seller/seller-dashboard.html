@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - Ndago Market</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span class="text-primary-custom">Market</span>
+        </a>
+        <div class="d-flex align-items-center gap-3">
+            <a href="add-product.html" class="btn btn-primary-custom btn-sm d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Add Product</a>
+            <div class="d-flex align-items-center gap-2">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:36px;height:36px;">G</div>
+                <span class="d-none d-sm-inline small fw-medium">GreenFarm</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <div class="row g-4">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+            <div class="card border-0 shadow-sm sticky-top" style="top:80px;">
+                <div class="list-group list-group-flush">
+                    <a href="seller-dashboard.html" class="list-group-item list-group-item-action sidebar-link active border-0"><i class="bi bi-house me-2"></i> Dashboard</a>
+                    <a href="products.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-box me-2"></i> My Products</a>
+                    <a href="add-product.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-plus-circle me-2"></i> Add Product</a>
+                    <a href="seller-orders.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-receipt me-2"></i> Orders</a>
+                    <a href="shop-profile.html" class="list-group-item list-group-item-action sidebar-link border-0"><i class="bi bi-person me-2"></i> Shop Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h4 fw-bold mb-1">Dashboard</h1>
+                    <p class="text-muted small mb-0">Welcome back, GreenFarm</p>
+                </div>
+                <a href="add-product.html" class="btn btn-primary-custom btn-sm d-sm-none"><i class="bi bi-plus-lg"></i> Add</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="row g-3 mb-4">
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-muted small">Total Products</div>
+                            <div class="fs-3 fw-bold">24</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-muted small">Active Listings</div>
+                            <div class="fs-3 fw-bold">18</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-muted small">Total Orders</div>
+                            <div class="fs-3 fw-bold">156</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-muted small">This Month</div>
+                            <div class="fs-3 fw-bold text-primary-custom">MK 485k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Table -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0 fw-bold">Your Products</h6>
+                    <a href="#" class="small text-primary-custom">View all</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=60&h=60&fit=crop" class="rounded" width="40" height="40" style="object-fit:cover;">
+                                        <span class="small fw-medium">Fresh Organic Tomatoes (5kg)</span>
+                                    </div>
+                                </td>
+                                <td>MK 4,500</td>
+                                <td>42</td>
+                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-link text-primary-custom p-0 me-2">Edit</button>
+                                    <button class="btn btn-sm btn-link text-danger p-0">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=60&h=60&fit=crop" class="rounded" width="40" height="40" style="object-fit:cover;">
+                                        <span class="small fw-medium">White Maize Grain - 50kg</span>
+                                    </div>
+                                </td>
+                                <td>MK 45,000</td>
+                                <td>15</td>
+                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-link text-primary-custom p-0 me-2">Edit</button>
+                                    <button class="btn btn-sm btn-link text-danger p-0">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=60&h=60&fit=crop" class="rounded" width="40" height="40" style="object-fit:cover;">
+                                        <span class="small fw-medium">Red Onions - 5kg</span>
+                                    </div>
+                                </td>
+                                <td>MK 3,800</td>
+                                <td>0</td>
+                                <td><span class="badge bg-danger-subtle text-danger">Out of Stock</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-link text-primary-custom p-0 me-2">Edit</button>
+                                    <button class="btn btn-sm btn-link text-danger p-0">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0 fw-bold">Recent Orders</h6>
+                    <a href="seller-orders.html" class="small text-primary-custom">View all</a>
+                </div>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="fw-medium">Order #NDG-1042</div>
+                            <small class="text-muted">Fresh Organic Tomatoes × 2 • 2 hours ago</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-medium">MK 9,000</div>
+                            <span class="badge bg-warning-subtle text-warning">Pending</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="fw-medium">Order #NDG-1038</div>
+                            <small class="text-muted">White Maize Grain × 1 • Yesterday</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-medium">MK 45,000</div>
+                            <span class="badge bg-success-subtle text-success">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/storage.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/utils.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

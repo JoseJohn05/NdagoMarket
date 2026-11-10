@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ndago Market</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column">
+
+<nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span class="text-primary-custom">Market</span>
+        </a>
+        <a href="register.html" class="btn btn-outline-secondary btn-sm">Create account</a>
+    </div>
+</nav>
+
+<main class="flex-grow-1 d-flex align-items-center py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <h1 class="h3 fw-bold">Welcome back</h1>
+                            <p class="text-muted">Login to your Ndago Market account</p>
+                        </div>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Email or Phone</label>
+                                <input type="text" class="form-control" placeholder="you@example.com or 0888..." required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-label">Password</label>
+                                    <a href="#" class="small text-primary-custom">Forgot password?</a>
+                                </div>
+                                <input type="password" class="form-control" placeholder="••••••••" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label" for="remember">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100 py-2">Login</button>
+                        </form>
+
+                        <div class="text-center my-4">
+                            <span class="text-muted small">Or continue with</span>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-secondary"><i class="bi bi-google me-2"></i>Google</button>
+                        </div>
+
+                        <p class="text-center text-muted small mt-4 mb-0">
+                            Don't have an account? <a href="register.html" class="text-primary-custom fw-medium">Register</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="py-3 text-center text-muted small">
+    © 2026 Ndago Market. All rights reserved.
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

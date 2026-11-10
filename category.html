@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Browse Products | Ndago Market</title>
+
+    <!-- Local Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container py-2">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
+            Ndago <span class="text-success">Market</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <form class="d-flex mx-lg-auto my-3 my-lg-0 category-search"
+                  data-marketplace-search
+                  id="searchForm">
+
+                <input type="search"
+                       id="productSearch"
+                       class="form-control"
+                       placeholder="Search products, shops...">
+
+                <button type="submit" class="btn btn-success">
+                    Search
+                </button>
+
+            </form>
+
+            <div class="d-flex align-items-center gap-3">
+
+                <a href="seller/seller-dashboard.html"
+                   class="nav-link">Sell</a>
+
+                <a href="login.html" class="nav-link">Login</a>
+
+                <a href="register.html"
+                   class="btn btn-success">Register</a>
+
+                <a href="cart.html" class="nav-link position-relative">
+                    <i class="bi bi-cart3 fs-5"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount" aria-live="polite">0</span>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- PAGE HERO -->
+<section class="category-hero">
+
+    <div class="container">
+
+        <div class="category-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Marketplace</span>
+        </div>
+
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-8">
+
+                <span class="category-eyebrow">
+                    DISCOVER SOMETHING NEW
+                </span>
+
+                <h1>Explore the Marketplace</h1>
+
+                <p>
+                    Find products from local businesses and sellers
+                    across Malawi. Your next great find is just a
+                    few clicks away.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+
+                <div class="category-highlight">
+                    <span>SHOP LOCAL</span>
+                    <h4>Discover. Connect. Trade.</h4>
+                    <p>Supporting businesses across Malawi.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORY QUICK LINKS -->
+<section class="category-shortcuts">
+
+    <div class="container">
+
+        <div class="d-flex align-items-center justify-content-between mb-3">
+
+            <h5 class="fw-bold mb-0">Browse Categories</h5>
+
+            <button class="btn btn-sm btn-outline-success"
+                    id="clearCategory">
+                All categories
+            </button>
+
+        </div>
+
+        <div class="category-pills">
+
+            <button class="category-pill active" data-category="all">
+                All Products
+            </button>
+
+            <button class="category-pill" data-category="Agriculture">
+                🌽 Agriculture
+            </button>
+
+            <button class="category-pill" data-category="Clothing">
+                👕 Clothing
+            </button>
+
+            <button class="category-pill" data-category="Electronics">
+                📱 Electronics
+            </button>
+
+            <button class="category-pill" data-category="Furniture">
+                🪑 Furniture
+            </button>
+
+            <button class="category-pill" data-category="Building Materials">
+                🧱 Building Materials
+            </button>
+
+            <button class="category-pill" data-category="Groceries">
+                🛒 Groceries
+            </button>
+
+            <button class="category-pill" data-category="Bakery">
+                🍞 Bakery
+            </button>
+
+            <button class="category-pill" data-category="Beauty & Cosmetics">
+               💅🏾 Beauty & Cosmetics
+            </button>
+
+            <button class="category-pill" data-category="Cuisines">
+               🍽️ Cuisines
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN MARKETPLACE -->
+<section class="marketplace-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- FILTER SIDEBAR -->
+            <aside class="col-lg-3">
+
+                <div class="filter-sidebar">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h5 class="fw-bold mb-0">Filters</h5>
+
+                        <button id="resetFilters"
+                                class="filter-reset">
+                            Reset
+                        </button>
+
+                    </div>
+
+
+                    <!-- CATEGORY FILTER -->
+                    <div class="filter-group">
+
+                        <h6>Categories</h6>
+
+                        <select id="categoryFilter" class="form-select">
+
+                            <option value="all">All Categories</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Building Materials">Building Materials</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Beauty & Cosmetics">Beauty & Cosmetics</option>
+                            <option value="Cuisines">Cuisines</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LOCATION FILTER -->
+                    <div class="filter-group">
+
+                        <h6>Location / District</h6>
+
+                        <select id="districtFilter" class="form-select">
+
+                            <option value="all">All Districts</option>
+                            <option value="Blantyre">Blantyre</option>
+                            <option value="Lilongwe">Lilongwe</option>
+                            <option value="Mzuzu">Mzuzu</option>
+                            <option value="Zomba">Zomba</option>
+                            <option value="Mangochi">Mangochi</option>
+                            <option value="Kasungu">Kasungu</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PRICE FILTER -->
+                    <div class="filter-group">
+
+                        <h6>Maximum Price</h6>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">MWK</span>
+
+                            <input type="number"
+                                   id="maxPrice"
+                                   class="form-control"
+                                   placeholder="e.g. 100000"
+                                   min="0">
+
+                        </div>
+
+                        <small class="text-muted">
+                            Enter your maximum budget.
+                        </small>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY -->
+                    <div class="filter-group">
+
+                        <h6>Availability</h6>
+
+                        <label class="filter-checkbox">
+
+                            <input type="checkbox"
+                                   id="availableOnly">
+
+                            <span>Available products only</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <button class="btn btn-success w-100 mt-3"
+                            id="applyFilters">
+
+                        Apply Filters
+
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- PRODUCT AREA -->
+            <div class="col-lg-9">
+
+                <!-- TOOLBAR -->
+                <div class="marketplace-toolbar">
+
+                    <div>
+
+                        <h4 class="fw-bold mb-1">
+                            Marketplace Products
+                        </h4>
+
+                        <p class="text-muted mb-0">
+                            <span id="productCount">6</span>
+                            products found
+                        </p>
+
+                    </div>
+
+                    <div class="sort-control">
+
+                        <label for="sortProducts">Sort by:</label>
+
+                        <select id="sortProducts" class="form-select">
+
+                            <option value="default">Recommended</option>
+                            <option value="newest">Newest first</option>
+                            <option value="low">Price: Low to High</option>
+                            <option value="high">Price: High to Low</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT GRID -->
+                <div class="row g-4" id="productsGrid">
+
+
+                    <!-- PRODUCT 1 -->
+                    <div class="col-6 col-md-6 col-xl-4 product-result"
+                         data-id="maize"
+                         data-name="fresh maize"
+                         data-category="Agriculture"
+                         data-district="Blantyre"
+                         data-price="25000"
+                         data-available="true"
+                         data-date="2026-10-25">
+
+                        <div class="market-product-card">
+
+                            <div class="market-product-image agriculture-image">
+                                <span>🌽</span>
+                                <span class="market-product-badge">Agriculture</span>
+                            </div>
+
+                            <div class="market-product-info">
+
+                                <small>Blantyre</small>
+
+                                <h6>Fresh Maize</h6>
+
+                                <p class="market-product-seller">
+                                    Seller: Demo Farm Supplies
+                                </p>
+
+                                <div class="market-product-price">
+                                    MWK 25,000
+                                </div>
+
+                                <span class="availability available">
+                                    Available
+                                </span>
+
+                                <a href="product.html?product=maize"
+                                   class="btn btn-success w-100 mt-3">
+                                    View Product
+                                </a>
+
+                                <button type="button" class="btn btn-outline-success w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 2 -->
+                    <div class="col-6 col-md-6 col-xl-4 product-result"
+                         data-id="shirt"
+                         data-name="casual fashion shirt"
+                         data-category="Clothing"
+                         data-district="Lilongwe"
+                         data-price="18000"
+                         data-available="true"
+                         data-date="2026-10-22">
+
+                        <div class="market-product-card">
+
+                            <div class="market-product-image clothing-image">
+                                <span>👕</span>
+                                <span class="market-product-badge">Clothing</span>
+                            </div>
+
+                            <div class="market-product-info">
+
+                                <small>Lilongwe</small>
+
+                                <h6>Casual Fashion Shirt</h6>
+
+                                <p class="market-product-seller">
+                                    Seller: Urban Wear
+                                </p>
+
+                                <div class="market-product-price">
+                                    MWK 18,000
+                                </div>
+
+                                <span class="availability available">
+                                    Available
+                                </span>
+
+                                <a href="product.html?product=shirt"
+                                   class="btn btn-success w-100 mt-3">
+                                    View Product
+                                </a>
+
+                                <button type="button" class="btn btn-outline-success w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 3 -->
+                    <div class="col-6 col-md-6 col-xl-4 product-result"
+                         data-id="smartphone"
+                         data-name="android smartphone"
+                         data-category="Electronics"
+                         data-district="Mzuzu"
+                         data-price="180000"
+                         data-available="true"
+                         data-date="2026-10-20">
+
+                        <div class="market-product-card">
+
+                            <div class="market-product-image electronics-image">
+                                <span>📱</span>
+                                <span class="market-product-badge">Electronics</span>
+                            </div>
+
+                            <div class="market-product-info">
+
+                                <small>Mzuzu</small>
+
+                                <h6>Android Smartphone</h6>
+
+                                <p class="market-product-seller">
+                                    Seller: Tech Zone
+                                </p>
+
+                                <div class="market-product-price">
+                                    MWK 180,000
+                                </div>
+
+                                <span class="availability available">
+                                    Available
+                                </span>
+
+                                <a href="product.html?product=phone"
+                                   class="btn btn-success w-100 mt-3">
+                                    View Product
+                                </a>
+
+                                <button type="button" class="btn btn-outline-success w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 4 -->
+                    <div class="col-6 col-md-6 col-xl-4 product-result"
+                         data-id="chair"
+                         data-name="modern wooden chair"
+                         data-category="Furniture"
+                         data-district="Zomba"
+                         data-price="95000"
+                         data-available="true"
+                         data-date="2026-10-18">
+
+                        <div class="market-product-card">
+
+                            <div class="market-product-image furniture-image">
+                                <span>🪑</span>
+                                <span class="market-product-badge">Furniture</span>
+                            </div>
+
+                            <div class="market-product-info">
+
+                                <small>Zomba</small>
+
+                                <h6>Modern Wooden Chair</h6>
+
+                                <p class="market-product-seller">
+                                    Seller: Home Comfort
+                                </p>
+
+                                <div class="market-product-price">
+                                    MWK 95,000
+                                </div>
+
+                                <span class="availability available">
+                                    Available
+                                </span>
+
+                                <a href="product.html?product=chair"
+                                   class="btn btn-success w-100 mt-3">
+                                    View Product
+                                </a>
+
+                                <button type="button" class="btn btn-outline-success w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 5 -->
+                    <div class="col-6 col-md-6 col-xl-4 product-result"
+                         data-id="cement"
+                         data-name="cement building materials"
+                         data-category="Building Materials"
+                         data-district="Blantyre"
+                         data-price="32000"
+                         data-available="true"
+                         data-date="2026-10-15">
+
+                        <div class="market-product-card">
+
+                            <div class="market-product-image building-image">
+                                <span>🧱</span>
+                                <span class="market-product-badge">Building</span>
+                            </div>
+
+                            <div class="market-product-info">
+
+                                <small>Blantyre</small>
+
+                                <h6>Building Cement</h6>
+
+                                <p class="market-product-seller">
+                                    Seller: Builders Depot
+                                </p>
+
+                                <div class="market-product-price">
+                                    MWK 32,000
+                                </div>
+
+                                <span class="availability available">
+                                    Available
+                                </span>
+
+                                <a href="product.html?product=cement"
+                                   class="btn btn-success w-100 mt-3">
+                                    View Product
+                                </a>
+
+                                <button type="button" class="btn btn-outline-success w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 6 -->
+                    <div class="col-6 col-md-6 col-xl-4 product-result"
+                         data-id="oil"
+                         data-name="cooking oil groceries"
+                         data-category="Groceries"
+                         data-district="Mangochi"
+                         data-price="12000"
+                         data-available="false"
+                         data-date="2026-10-10">
+
+                        <div class="market-product-card">
+
+                            <div class="market-product-image groceries-image">
+                                <span>🛒</span>
+                                <span class="market-product-badge">Groceries</span>
+                            </div>
+
+                            <div class="market-product-info">
+
+                                <small>Mangochi</small>
+
+                                <h6>Cooking Oil</h6>
+
+                                <p class="market-product-seller">
+                                    Seller: Daily Needs Store
+                                </p>
+
+                                <div class="market-product-price">
+                                    MWK 12,000
+                                </div>
+
+                                <span class="availability unavailable">
+                                    Out of Stock
+                                </span>
+
+                                <a href="product.html?product=oil"
+                                   class="btn btn-outline-secondary w-100 mt-3">
+                                    View Product
+                                </a>
+
+                                <button type="button" class="btn btn-outline-success w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+                <div id="emptyState" class="empty-state d-none">
+
+                    <div>🔎</div>
+
+                    <h5>No products found</h5>
+
+                    <p>
+                        Try changing your search or adjusting your filters.
+                    </p>
+
+                    <button class="btn btn-success" id="emptyReset">
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SELLER CTA -->
+<section class="category-seller-cta">
+
+    <div class="container">
+
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-8">
+
+                <span>GROW YOUR BUSINESS</span>
+                <h2>Have something to sell?</h2>
+                <p>Display your products now and reach customers across Malawi through Ndago Market</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="register.html" class="btn btn-light btn-lg">Start Selling Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold">Ndago <span class="text-success">Market</span></h5>
+                <p class="text-secondary">Connecting local businesses and customers nation-wide through an online marketplace</p>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h6>Marketplace</h6>
+                <a href="index.html" class="footer-link">Home</a>
+                 <a href="product.html" class="footer-link">Products</a>
+                  <a href="cart.html" class="footer-link">Shopping cart</a>
+            </div>
+
+            <div class="col-lg-4">
+                <h6>Customer Support</h6>
+                <a href="#" class="footer-link">Help Centre</a>
+                <a href="#" class="footer-link">Terms and Conditions</a>
+            </div>
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <p class="text-center text-secondary small mb-0">
+            &copy;2026 Ndago Market. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/marketplace.js"></script>
+<script src="assets/js/category.js"></script>
+<script src="assets/js/cart.js"></script>
+
+</body>
+</html>

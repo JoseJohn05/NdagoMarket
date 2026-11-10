@@ -1,0 +1,1175 @@
+/*
+==============================
+NDAGO MARKET - MAIN STYLESHEET
+==============================
+*/
+
+/* 1. GLOBAL VARIABLES */
+:root { 
+    --primary: #08783C;
+    --primary-dark: #075c32;
+    --secondary: #159447;
+    
+    --background: #F5F7F5;
+    --text-dark: #26352B;
+    --text-muted: #6c757d;
+
+    --border-radius: 12px;
+}
+
+/* 2. GENERAL STYLES */
+
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text-dark);
+    font-family: 'inter',sans-serif;max-width: 100%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    scroll-margin-top: 85px;
+}
+
+.text-primary-custom { 
+    color: var(--primary) !important; 
+}
+
+/* 3. BRAND COLOURS */
+
+.bg-primary-custom { 
+    background-color: var(--primary) !important; 
+}
+.btn-primary-custom { 
+    background-color: var(--primary); 
+    border-color: var(--primary); 
+    color: #fff; 
+}
+.btn-primary-custom:hover { 
+    background-color: var(--primary-dark); 
+    border-color: var(--primary-dark); 
+    color: #fff;
+}
+
+/* 4. NAVIGATION */
+
+.navbar{
+    z-index: 1000;
+}
+
+.navbar-brand{
+    font-size: 1.35rem;
+}
+
+.navbar-brand span { 
+    color: var(--primary); 
+}
+
+.navbar .nav-link{
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover{
+    color: var(--primary);
+}
+
+.nav-pills .nav-link.active { 
+    background-color: var(--primary); 
+}
+
+.nav-pills .nav-link { 
+    color: #333; 
+}
+
+.sidebar-link { 
+    color: #495057; 
+}
+
+.sidebar-link:hover, .sidebar-link.active { 
+    background-color: #dcfce7; 
+    color: var(--primary); 
+}
+
+/* 5. HERO SECTION */
+
+
+/* ==========================================
+   NDAGO MARKET - VIBRANT HERO DESIGN
+========================================== */
+
+:root {
+    --ndago-green: #159447;
+    --ndago-dark: #075c32;
+    --ndago-light: #e9f7ed;
+    --ndago-orange: #f29b38;
+    --ndago-cream: #fff8ed;
+    --ndago-text: #202b24;
+}
+
+/* HERO BACKGROUND */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 5% 15%,
+            rgba(255, 255, 255, 0.13),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #075c32 0%,
+            #10863f 55%,
+            #19a14f 100%
+        );
+
+    color: #fff;
+    padding: 75px 0 95px;
+}
+
+/* DECORATIVE BACKGROUND SHAPES */
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 50%;
+    top: -200px;
+    right: -100px;
+    z-index: -1;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(255,255,255,0.045);
+    border-radius: 50%;
+    bottom: -160px;
+    left: 25%;
+    z-index: -1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* LEFT CONTENT */
+
+.hero-content {
+    max-width: 590px;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    padding: 9px 16px;
+    border-radius: 50px;
+
+    color: #e9f8ed;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    margin-bottom: 24px;
+}
+
+.hero-eyebrow i {
+    color: #f9c66b;
+}
+
+.hero-title {
+    font-size: clamp(2.8rem, 5vw, 4.3rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+
+    margin-bottom: 24px;
+}
+
+.hero-title span {
+    display: block;
+}
+
+.hero-title-accent {
+    color: #f8ce7d;
+}
+
+.hero-description {
+    max-width: 540px;
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+
+    margin-bottom: 30px;
+}
+
+/* HERO BUTTONS */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.hero-btn-primary,
+.hero-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 23px;
+    border-radius: 9px;
+
+    font-size: 0.94rem;
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+.hero-btn-primary {
+    background: #ffffff !important;
+    color: #075c32 !important;
+    border: 2px solid #fff !important;
+}
+
+.hero-btn-primary:hover {
+    background-color: #f8ce7d !important;
+    color: #253324 !important;
+    border-color: #f8ce7d !important;
+}
+
+.hero-btn-outline {
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    background-color: transparent !important;
+}
+
+.hero-btn-outline:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: #ffffff !important;
+}
+
+/* TRUST INDICATOR */
+
+.hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.trust-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+
+    color: #f8ce7d;
+    font-size: 1.3rem;
+}
+
+.hero-trust strong,
+.hero-trust small {
+    display: block;
+}
+
+.hero-trust strong {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hero-trust small {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.76rem;
+    margin-top: 3px;
+}
+
+/* RIGHT IMAGE */
+
+.hero-visual {
+    position: relative;
+    padding: 8px 8px 65px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+
+    border-radius: 25px;
+    border: 5px solid rgba(255,255,255,0.18);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.22);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.hero-image-wrapper:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        transparent 55%
+    );
+}
+
+/* IMAGE LABEL */
+
+.hero-image-label {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-image-label strong,
+.hero-image-label small {
+    display: block;
+}
+
+.hero-image-label strong {
+    font-size: 1.05rem;
+}
+
+.hero-image-label small {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+.hero-live-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background: #70e89a;
+    box-shadow: 0 0 0 6px rgba(112,232,154,0.2);
+}
+
+/* FLOATING STATISTICS PANEL */
+
+.hero-stats {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.hero-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 13px;
+
+    background: rgba(255,255,255,0.97);
+    color: var(--ndago-text);
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 13px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.13);
+
+    backdrop-filter: blur(12px);
+
+    transition: transform 0.25s ease;
+}
+
+.hero-stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.hero-stat-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+    font-size: 1.25rem;
+}
+
+.icon-green {
+    background: #e2f5e8;
+    color: #168c43;
+}
+
+.icon-orange {
+    background: #fff0df;
+    color: #df8a27;
+}
+
+.icon-yellow {
+    background: #fff6d9;
+    color: #c18c19;
+}
+
+.icon-dark {
+    background: #e9edeb;
+    color: #355b43;
+}
+
+.hero-stat-card h5 {
+    font-size: 0.84rem;
+    font-weight: 800;
+    margin: 0 0 4px;
+}
+
+.hero-stat-card p {
+    color: #788078;
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE HERO DESIGN
+========================================== */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 65px 0 85px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(2.7rem, 7vw, 3.8rem);
+    }
+
+    .hero-visual {
+        max-width: 650px;
+        margin: 15px auto 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-section {
+        padding: 50px 0 75px;
+    }
+
+    .hero-title {
+        font-size: 2.55rem;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-btn-primary,
+    .hero-btn-outline {
+        width: 100%;
+    }
+
+    .hero-image-wrapper {
+        height: 290px;
+        border-radius: 19px;
+    }
+
+    .hero-visual {
+        padding: 5px 0 55px;
+    }
+
+    .hero-stats {
+        left: 10px;
+        right: 10px;
+        gap: 7px;
+    }
+
+    .hero-stat-card {
+        padding: 11px 8px;
+        gap: 8px;
+        border-radius: 10px;
+    }
+
+    .hero-stat-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .hero-stat-card h5 {
+        font-size: 0.72rem;
+    }
+
+    .hero-stat-card p {
+        font-size: 0.61rem;
+    }
+
+    .hero-trust {
+        margin-top: 27px;
+    }
+
+}
+
+
+/* 6. CATEGORY CARDS */
+
+.category-card{
+    border-radius: var(--border-radius);
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+.category-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08)!important;
+}
+
+.category-card .card-body{
+    padding: 25px 12px;
+}
+
+/* 7. PRODUCT CARDS */
+
+.product-card{
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+
+.product-card img { 
+    height: 200px; 
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 25px rgba(0,0,0,.1) !important; 
+}
+
+.product-card:hover img{
+    transform: scale(1.04);
+}
+
+.product-card .card-body{
+    padding: 16px;
+}
+
+.thumb-img { 
+    cursor: pointer; 
+    opacity: 0.7; 
+}
+
+.thumb-img:hover, .thumb-img.active { 
+    opacity: 1; 
+    border-color: var(--primary) !important; 
+}
+
+.category-shortcuts, .marketplace-section{
+    max-width: 100%;
+}
+
+.category-pills{
+    max-width: 100%;
+}
+
+/* 8. GENERAL BUTTONS */
+
+.btn{
+    transition: all 0.2s ease;
+}
+
+.btn-primary-custom:focus{
+    box-shadow: 0 0 0 0.2rem rgba(22,163,74,0.25);
+}
+
+/* 9. FOOTER */
+
+footer{
+    background-color: #212529;
+}
+
+footer a{
+    transition: color 0.2s ease;
+}
+
+footer a:hover{
+    color: white!important;
+}
+
+/* 10. FORMS */
+
+.form-check-input:checked { 
+    background-color: var(--primary); 
+    border-color: var(--primary); 
+}
+
+.upload-zone { 
+    border: 2px dashed #dee2e6; 
+    transition: 0.2s; 
+}
+
+.upload-zone:hover { 
+    border-color: var(--primary); 
+    background: #f0fdf4; 
+}
+
+/* 11. SHOP */
+.shop-banner { 
+    height: 160px; 
+    background: linear-gradient(135deg, #15803d, #166534); 
+}
+
+/* 12. CART */
+
+.add-to-cart-btn{
+    font-size: 0.83rem;
+    font-weight: 600;
+    border-width: 1.5px;
+}
+
+.add-to-cart-btn.added-to-cart{
+    background: #159447;
+    color: #fff;
+    border-color: #159447;
+}
+
+/* 13. RESPONSIVE DESIGN */
+
+@media(max-width: 991px){
+    .hero-section{
+        padding-top: 55px!important;
+        padding-bottom: 55px!important;
+    }
+}
+
+@media(max-width: 576px){
+
+    .hero-section h1{
+        font-size: 2.2rem;
+    }
+
+    .hero-section .btn{
+        font-size: 0.9rem;
+    }
+
+    .product-card img{
+        height: 155px;
+    }
+
+    .product-card .card-body{
+        padding: 12px;
+    }
+}
+
+
+/* =========================================
+   NDAGO MARKET - CATEGORY PAGE
+========================================= */
+
+.category-hero {
+    background: linear-gradient(120deg, #075c32, #159447);
+    color: white;
+    padding: 55px 0;
+}
+
+.category-breadcrumb {
+    display: flex;
+    gap: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    color: rgba(255,255,255,0.7);
+}
+
+.category-breadcrumb a {
+    color: #f8ce7d;
+}
+
+.category-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.category-hero p {
+    color: #e0f1e5;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.category-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #f8ce7d;
+}
+
+.category-highlight {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 22px;
+    display: inline-block;
+    text-align: left;
+}
+
+.category-highlight span {
+    color: #f8ce7d;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.category-highlight h4 {
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.category-highlight p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+/* CATEGORY SHORTCUTS */
+
+.category-shortcuts {
+    padding: 30px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-pill {
+    border: 1px solid #e4e9e4;
+    background: #f7f9f7;
+    color: #39463d;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.category-pill:hover,
+.category-pill.active {
+    background: #159447;
+    color: white;
+    border-color: #159447;
+}
+
+/* MARKETPLACE LAYOUT */
+
+.marketplace-section {
+    background: #f8faf8;
+    padding: 45px 0 75px;
+}
+
+/* FILTER SIDEBAR */
+
+.filter-sidebar {
+    background: white;
+    border: 1px solid #edf0ed;
+    border-radius: 15px;
+    padding: 24px;
+    position: sticky;
+    top: 95px;
+}
+
+.filter-reset {
+    border: none;
+    background: none;
+    color: #159447;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.filter-group {
+    padding: 19px 0;
+    border-top: 1px solid #edf0ed;
+}
+
+.filter-group h6 {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 13px;
+}
+
+.filter-group .form-select,
+.filter-group .form-control {
+    font-size: 0.85rem;
+    padding: 11px;
+    border-color: #e4e9e4;
+}
+
+.filter-group small {
+    display: block;
+    margin-top: 8px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.filter-checkbox input {
+    accent-color: #159447;
+    width: 16px;
+    height: 16px;
+}
+
+/* TOOLBAR */
+
+.marketplace-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.marketplace-toolbar h4 {
+    font-size: 1.35rem;
+}
+
+.marketplace-toolbar p {
+    font-size: 0.85rem;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-control label {
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.sort-control select {
+    min-width: 165px;
+    font-size: 0.85rem;
+    border-color: #e3e9e3;
+    padding: 10px;
+}
+
+/* PRODUCT CARDS */
+
+.market-product-card {
+    height: 100%;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #edf0ed;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+}
+
+.market-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.market-product-image {
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.market-product-image > span:first-child {
+    font-size: 4.5rem;
+    transition: transform 0.3s ease;
+}
+
+.market-product-card:hover .market-product-image > span:first-child {
+    transform: scale(1.12);
+}
+
+.agriculture-image {
+    background: #e8f4e7;
+}
+
+.clothing-image {
+    background: #f8e9e9;
+}
+
+.electronics-image {
+    background: #e9effa;
+}
+
+.furniture-image {
+    background: #f4ede2;
+}
+
+.building-image {
+    background: #f5e9e2;
+}
+
+.groceries-image {
+    background: #fff3df;
+}
+
+.market-product-badge {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: white;
+    color: #168b43;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.market-product-info {
+    padding: 17px;
+}
+
+.market-product-info > small {
+    color: #159447;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.market-product-info h6 {
+    font-weight: 800;
+    margin: 8px 0;
+    min-height: 38px;
+}
+
+.market-product-seller {
+    font-size: 0.77rem;
+    color: #818981;
+    margin-bottom: 12px;
+}
+
+.market-product-price {
+    color: #12833d;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.availability {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 9px;
+    padding: 5px 9px;
+    border-radius: 20px;
+}
+
+.availability.available {
+    background: #e7f6eb;
+    color: #13833e;
+}
+
+.availability.unavailable {
+    background: #fceaea;
+    color: #bd3838;
+}
+
+.market-product-info .btn {
+    font-size: 0.83rem;
+    font-weight: 600;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    background: white;
+    border: 1px dashed #cdd8cd;
+    border-radius: 15px;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.empty-state > div {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #788078;
+}
+
+/* SELLER CTA */
+
+.category-seller-cta {
+    background: linear-gradient(120deg, #075c32, #159447);
+    color: white;
+    padding: 60px 0;
+}
+
+.category-seller-cta span {
+    color: #f8ce7d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.category-seller-cta h2 {
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.category-seller-cta p {
+    color: #e0f1e5;
+    margin-bottom: 0;
+}
+
+.category-seller-cta .btn {
+    color: #075c32;
+    font-weight: 700;
+}
+
+/* FOOTER LINKS */
+
+.footer-link {
+    display: block;
+    color: #aebbb1;
+    text-decoration: none;
+    font-size: 0.87rem;
+    margin-bottom: 11px;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 991px) {
+
+    .filter-sidebar {
+        position: static;
+    }
+
+    .marketplace-section {
+        padding-top: 30px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .category-hero {
+        padding: 40px 0;
+    }
+
+    .category-highlight {
+        width: 100%;
+    }
+
+    .category-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .category-pill {
+        white-space: nowrap;
+    }
+
+    .marketplace-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sort-control {
+        width: 100%;
+    }
+
+    .sort-control select {
+        flex: 1;
+    }
+
+    .market-product-image {
+        height: 135px;
+    }
+
+    .market-product-info {
+        padding: 11px;
+    }
+
+    .market-product-info h6 {
+        font-size: 0.85rem;
+    }
+
+    .market-product-seller {
+        font-size: 0.69rem;
+    }
+
+    .market-product-price {
+        font-size: 0.9rem;
+    }
+
+}
