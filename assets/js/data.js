@@ -56,7 +56,7 @@
         },
         {
             id: "seller-agrosupply",
-            shopName: "AgroSupply",
+            shopName: "AgroDealer",
             ownerName: "AgroSupply Owner",
             district: "Kasungu",
             description: "Local agricultural supply serving farmers and households.",
@@ -68,22 +68,22 @@
 
     const products = [
         {
-            id: "fresh-maize",
-            name: "Fresh Maize",
-            description: "Fresh locally sourced maize.",
+            id: "maize-flour",
+            name: "NASFAM M'gaiwa - 50kg",
+            description: "Produced from locally grown maize.",
             category: "Agriculture",
             categoryId: "agriculture",
             price: 45000,
             image: "assets/imgs/products/Mgaiwa.jpg",
             sellerId: "seller-agrosupply",
-            district: "Kasungu",
+            district: "Blantyre",
             stockQuantity: 20,
             availability: true,
             dateAdded: "2026-01-10"
         },
         {
             id: "casual-fashion-shirt",
-            name: "Casual Fashion Shirt",
+            name: "Classic Cotton Shirt - White",
             description: "A comfortable casual shirt suitable for everyday wear.",
             category: "Clothing",
             categoryId: "clothing",
@@ -97,11 +97,11 @@
         },
         {
             id: "android-smartphone",
-            name: "Android Smartphone",
-            description: "An Android smartphone for everyday communication and entertainment.",
+            name: "Samsung Galaxy A15",
+            description: "Brand new Samsung Galaxy Android with 128GB storage, 4GB RAM and MediaTek Dimnsity 6100+ Chipset",
             category: "Electronics",
             categoryId: "electronics",
-            price: 185000,
+            price: 555000,
             image: "assets/imgs/products/Galaxy A15.jpg",
             sellerId: "seller-techzone",
             district: "Lilongwe",
@@ -150,8 +150,8 @@
         if (missingCategories.length) NdagoStorage.write("categories", storedCategories.concat(missingCategories));
         // Backfill real bundled photos for original demo listings that were seeded without images.
         const demoImages = {
-            "fresh-maize": "assets/imgs/products/Mgaiwa.jpg",
-            "casual-fashion-shirt": "assets/imgs/products/White Shirt.jpg",
+            "fresh-maize": "assets/imgs/products/Fresh Maize.jpg",
+            "casual-fashion-shirt": "assets/imgs/products/WhitShirt.jpg",
             "android-smartphone": "assets/imgs/products/Galaxy A15.jpg",
             "fresh-organic-tomatoes": "assets/imgs/products/Tomatoes.jpg"
         };
