@@ -16,6 +16,19 @@
         });
     }
 
+    function isPublicProduct(product) {
+        const seller = sellerFor(product);
+        const owner = seller && NdagoStorage.read("customers", []).find(function (customer) { return customer.id === seller.ownerId; });
+        return product.status !== "draft" && product.moderationStatus !== "rejected" &&
+            Boolean(seller && seller.approvalStatus === "approved" && seller.accountStatus !== "disabled") &&
+            Boolean(!owner || owner.accountStatus !== "disabled");
+    }
+
+    function isPublicSeller(seller) {
+        const owner = seller && NdagoStorage.read("customers", []).find(function (customer) { return customer.id === seller.ownerId; });
+        return Boolean(seller && seller.approvalStatus === "approved" && seller.accountStatus !== "disabled" && (!owner || owner.accountStatus !== "disabled"));
+    }
+
     function card(product) {
         const seller = sellerFor(product);
         const productUrl = assetRoot() + "product.html?product=" + encodeURIComponent(product.id);
@@ -65,7 +78,7 @@
         const container = document.getElementById(containerId);
         if (!container) return;
         container.innerHTML = NdagoData.getProducts()
-            .filter(function (product) { return product.availability; })
+            .filter(function (product) { return isPublicProduct(product) && product.availability; })
             .slice(0, 8)
             .map(simpleCard).join("");
     }
@@ -73,13 +86,13 @@
     function renderCategory(containerId) {
         const container = document.getElementById(containerId);
         if (!container) return;
-        container.innerHTML = NdagoData.getProducts().map(card).join("");
+        container.innerHTML = NdagoData.getProducts().filter(isPublicProduct).map(card).join("");
     }
 
     function renderRecent(containerId) {
         const container = document.getElementById(containerId);
         if (!container) return;
-        const products = NdagoData.getProducts().slice().sort(function (a, b) {
+        const products = NdagoData.getProducts().filter(isPublicProduct).slice().sort(function (a, b) {
             return new Date(b.dateAdded) - new Date(a.dateAdded);
         });
         container.innerHTML = products.slice(0, 4).map(simpleCard).join("");
@@ -89,7 +102,7 @@
         const container = document.getElementById(containerId);
         if (!container) return;
         container.innerHTML = NdagoData.getSellers()
-            .filter(function (seller) { return seller.approvalStatus === "approved"; })
+            .filter(isPublicSeller)
             .slice(0, 4)
             .map(function (seller) {
                 return '<div class="col-6 col-md-3"><a href="' + assetRoot() +
@@ -102,5 +115,5 @@
             }).join("");
     }
 
-    global.NdagoMarketplace = { card, simpleCard, imageUrl, sellerFor, renderFeatured, renderCategory, renderRecent, renderSellers };
+    global.NdagoMarketplace = { card, simpleCard, imageUrl, sellerFor, isPublicProduct, isPublicSeller, renderFeatured, renderCategory, renderRecent, renderSellers };
 })(window);

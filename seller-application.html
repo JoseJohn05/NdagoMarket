@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seller Application | Ndago Market</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-light bg-white shadow-sm"><div class="container"><a class="navbar-brand fw-bold" href="index.html"><span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>Ndago <span class="text-primary-custom">Market</span></a><a href="account.html" class="btn btn-outline-success btn-sm">My account</a></div></nav>
+<main class="container py-4 py-lg-5" style="max-width:880px">
+    <a href="index.html" class="small">← Back to marketplace</a>
+    <div class="my-3"><p class="text-primary-custom fw-semibold small mb-1">SELL WITH NDAGO</p><h1 class="h2 fw-bold">Seller application</h1><p class="text-muted">Tell us about your shop. Applications are reviewed by an administrator before products can be published.</p></div>
+    <div data-application-status hidden class="mb-4"></div>
+    <form class="card border-0 shadow-sm" data-seller-application>
+        <div class="card-body p-4 p-md-5">
+            <div class="alert alert-info">This is a frontend demonstration. Application status is stored in this browser and is not a secure approval system.</div>
+            <h2 class="h5 fw-bold mb-3">Applicant details</h2>
+            <div class="row g-3 mb-4">
+                <div class="col-md-6"><label class="form-label" for="appOwner">Your name *</label><input id="appOwner" class="form-control" name="ownerName" required maxlength="100"></div>
+                <div class="col-md-6"><label class="form-label" for="appEmail">Email *</label><input id="appEmail" class="form-control" name="email" type="email" required maxlength="160"></div>
+                <div class="col-md-6"><label class="form-label" for="appPhone">Telephone *</label><input id="appPhone" class="form-control" name="phone" type="tel" required maxlength="40"></div>
+                <div class="col-md-6"><label class="form-label" for="appWhatsapp">WhatsApp (optional)</label><input id="appWhatsapp" class="form-control" name="whatsapp" type="tel" maxlength="40"></div>
+            </div>
+            <h2 class="h5 fw-bold mb-3">Shop information</h2>
+            <div class="row g-3">
+                <div class="col-md-6"><label class="form-label" for="appShopName">Shop or business name *</label><input id="appShopName" class="form-control" name="shopName" required maxlength="100"></div>
+                <div class="col-md-6"><label class="form-label" for="appCategory">Main category *</label><select id="appCategory" class="form-select" name="businessCategory" required><option value="">Select category</option></select></div>
+                <div class="col-md-6"><label class="form-label" for="appDistrict">District *</label><select id="appDistrict" class="form-select" name="district" required><option value="">Select district</option></select></div>
+                <div class="col-12"><label class="form-label" for="appDescription">Shop description *</label><textarea id="appDescription" class="form-control" name="description" rows="4" required maxlength="1000" placeholder="Describe what your business offers"></textarea></div>
+                <div class="col-12"><div class="form-check"><input id="appConsent" class="form-check-input" type="checkbox" required><label class="form-check-label" for="appConsent">I confirm these business details are accurate.</label></div></div>
+                <div class="col-12"><button class="btn btn-primary-custom px-4" type="submit">Submit for review</button><a href="account.html" class="btn btn-link text-muted">Cancel</a></div>
+            </div>
+        </div>
+    </form>
+</main>
+<footer class="py-4 text-center text-muted small">© 2026 Ndago Market</footer>
+<script src="assets/js/bootstrap.bundle.min.js"></script><script src="assets/js/storage.js"></script><script src="assets/js/data.js"></script><script src="assets/js/utils.js"></script><script src="assets/js/auth.js"></script><script src="assets/js/app.js"></script><script src="assets/js/seller.js"></script>
+</body></html>

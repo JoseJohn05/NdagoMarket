@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!grid || !category || !district || !maximum || !available || !sort) return;
 
     const params = new URLSearchParams(window.location.search);
+    const categoryRecords = NdagoData.getCategories();
+    category.innerHTML = '<option value="all">All Categories</option>' + categoryRecords.map(function (item) {
+        return '<option value="' + NdagoUtils.escapeHtml(item.name) + '">' + NdagoUtils.escapeHtml(item.name) + '</option>';
+    }).join("");
+    const pills = document.querySelector(".category-pills");
+    if (pills) pills.innerHTML = '<button type="button" class="category-pill active" data-category="all">All Products</button>' + categoryRecords.map(function (item) {
+        return '<button type="button" class="category-pill" data-category="' + NdagoUtils.escapeHtml(item.name) + '">' + NdagoUtils.escapeHtml(item.name) + '</button>';
+    }).join("");
     const requestedCategory = params.get("category");
     if (requestedCategory) {
         const match = Array.from(category.options).find(function (option) {
@@ -25,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function render() {
         let products = NdagoData.getProducts().filter(function (product) {
+            if (!NdagoMarketplace.isPublicProduct(product)) return false;
             const query = search ? search.value.trim().toLowerCase() : "";
             const categoryMatch = category.value === "all" || product.category === category.value;
             const districtMatch = district.value === "all" || product.district === district.value;

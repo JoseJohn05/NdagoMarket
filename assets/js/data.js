@@ -10,7 +10,17 @@
         { id: "building-materials", name: "Building Materials" },
         { id: "groceries", name: "Groceries" },
         { id: "bakery", name: "Bakery" },
-        { id: "beauty-cosmetics", name: "Beauty & Cosmetics" }
+        { id: "beauty-cosmetics", name: "Beauty & Cosmetics" },
+        { id: "home-kitchen", name: "Home & Kitchen" },
+        { id: "phones-accessories", name: "Phones & Accessories" },
+        { id: "health-personal-care", name: "Health & Personal Care" },
+        { id: "shoes-bags-accessories", name: "Shoes, Bags & Accessories" },
+        { id: "automotive-parts", name: "Automotive & Motorbike Parts" },
+        { id: "books-school-office", name: "Books, Education & Office Supplies" },
+        { id: "sports-outdoors", name: "Sports & Outdoors" },
+        { id: "arts-crafts-local", name: "Arts, Crafts & Local Products" },
+        { id: "baby-kids", name: "Baby & Kids" },
+        { id: "services", name: "Services" }
     ];
 
     const sellers = [
@@ -64,7 +74,7 @@
             category: "Agriculture",
             categoryId: "agriculture",
             price: 45000,
-            image: "assets/imgs/banners/Fresh-Products.jpg",
+            image: "assets/imgs/products/Mgaiwa.jpg",
             sellerId: "seller-agrosupply",
             district: "Kasungu",
             stockQuantity: 20,
@@ -78,7 +88,7 @@
             category: "Clothing",
             categoryId: "clothing",
             price: 12000,
-            image: "",
+            image: "assets/imgs/products/White Shirt.jpg",
             sellerId: "seller-stylehub",
             district: "Blantyre",
             stockQuantity: 30,
@@ -92,7 +102,7 @@
             category: "Electronics",
             categoryId: "electronics",
             price: 185000,
-            image: "",
+            image: "assets/imgs/products/Galaxy A15.jpg",
             sellerId: "seller-techzone",
             district: "Lilongwe",
             stockQuantity: 8,
@@ -106,7 +116,7 @@
             category: "Agriculture",
             categoryId: "agriculture",
             price: 4500,
-            image: "",
+            image: "assets/imgs/products/Tomatoes.jpg",
             sellerId: "seller-greenfarm",
             district: "Lilongwe",
             stockQuantity: 50,
@@ -127,14 +137,34 @@
     }
 
     function initialize() {
-        const required = ["categories", "sellers", "products", "customers", "cart", "orders", "sellerApplications", "enquiries"];
-        const missing = required.some(function (key) {
-            return NdagoStorage.read(key, null) === null;
+        const seed = {
+            categories: categories, sellers: sellers, products: products, customers: [],
+            cart: [], orders: [], sellerApplications: [], enquiries: []
+        };
+        Object.keys(seed).forEach(function (key) {
+            if (NdagoStorage.read(key, null) === null) NdagoStorage.write(key, seed[key]);
         });
-
-        if (missing) {
-            reset();
-        }
+        const storedCategories = NdagoStorage.read("categories", []);
+        const knownCategoryIds = new Set(storedCategories.map(function (category) { return category.id; }));
+        const missingCategories = categories.filter(function (category) { return !knownCategoryIds.has(category.id); });
+        if (missingCategories.length) NdagoStorage.write("categories", storedCategories.concat(missingCategories));
+        // Backfill real bundled photos for original demo listings that were seeded without images.
+        const demoImages = {
+            "fresh-maize": "assets/imgs/products/Mgaiwa.jpg",
+            "casual-fashion-shirt": "assets/imgs/products/White Shirt.jpg",
+            "android-smartphone": "assets/imgs/products/Galaxy A15.jpg",
+            "fresh-organic-tomatoes": "assets/imgs/products/Tomatoes.jpg"
+        };
+        const currentProducts = NdagoStorage.read("products", []);
+        let productsChanged = false;
+        currentProducts.forEach(function (product) {
+            const localImage = demoImages[product.id];
+            if (localImage && (!product.image || product.image.indexOf("placeholder.svg") !== -1 || product.image === "assets/imgs/banners/Fresh-Products.jpg")) {
+                product.image = localImage;
+                productsChanged = true;
+            }
+        });
+        if (productsChanged) NdagoStorage.write("products", currentProducts);
     }
 
     global.NdagoData = {

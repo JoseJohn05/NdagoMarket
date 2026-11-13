@@ -69,7 +69,7 @@ function addToCart(product) {
         ? Number(existingProduct.quantity ?? existingProduct.qty ?? 0)
         : 0;
     const nextQuantity = currentQuantity + 1;
-    if (stockQuantity > 0 && nextQuantity > stockQuantity) {
+    if (stockQuantity <= 0 || nextQuantity > stockQuantity) {
         return false;
     }
 
@@ -130,7 +130,15 @@ function updateCartQuantity(productId, quantity) {
         return;
     }
 
-    product.quantity = newQuantity;
+    const catalogueProduct = window.NdagoData && NdagoData.getProducts().find(function (item) {
+        return String(item.id) === String(productId);
+    });
+    const maximum = catalogueProduct ? Number(catalogueProduct.stockQuantity) : newQuantity;
+    if (maximum <= 0) {
+        removeFromCart(productId);
+        return;
+    }
+    product.quantity = Math.min(newQuantity, maximum);
     delete product.qty;
 
     saveCart(cart);

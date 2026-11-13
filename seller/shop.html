@@ -20,7 +20,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                <li class="nav-item"><a class="nav-link" href="seller-dashboard.html"><i class="bi bi-shop"></i> Sell</a></li>
+                <li class="nav-item"><a class="nav-link" href="../seller-application.html"><i class="bi bi-shop"></i> Sell</a></li>
                 <li class="nav-item"><a class="nav-link position-relative" href="../cart.html"><i class="bi bi-cart3 fs-5"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" data-cart-count>0</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
                 <li class="nav-item"><a class="btn btn-primary-custom btn-sm px-3" href="../register.html">Register</a></li>
@@ -29,25 +29,24 @@
     </div>
 </nav>
 
-<div class="shop-banner"></div>
+<div class="shop-banner"><img data-shop-cover alt="" class="w-100 h-100" style="object-fit:cover;display:none"></div>
 
 <div class="container">
     <div class="card border-0 shadow-sm mx-auto" style="margin-top:-60px; max-width:900px;">
         <div class="card-body p-4">
             <div class="d-flex flex-column flex-sm-row gap-4 align-items-start align-items-sm-center">
-                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold fs-2 border border-4 border-white shadow-sm" style="width:100px;height:100px;margin-top:-50px;">G</div>
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold fs-2 border border-4 border-white shadow-sm overflow-hidden" style="width:100px;height:100px;margin-top:-50px;"><img data-shop-logo alt="" class="w-100 h-100" style="object-fit:cover;display:none"><span data-shop-initial> S</span></div>
                 <div class="flex-grow-1">
                     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
                         <div>
                             <h1 class="h3 fw-bold mb-1" id="shopName">GreenFarm</h1>
                             <div class="small text-muted">
-                                <span class="text-warning">★★★★★</span> 4.8 • 128 sales • <span id="shopDistrict">Malawi</span>
+                                <span id="shopDistrict">Malawi</span>
                             </div>
                         </div>
                         <div class="d-flex gap-2">
                             <a href="#" id="shopPhoneLink" class="btn btn-outline-success btn-sm">Call Seller</a>
                             <a href="#" id="shopWhatsappLink" class="btn btn-outline-success btn-sm">WhatsApp</a>
-                            <button class="btn btn-primary-custom btn-sm">Follow</button>
                         </div>
                     </div>
                     <p class="text-muted small mt-3 mb-0" id="shopDescription">Marketplace seller profile.</p>
@@ -56,19 +55,14 @@
         </div>
     </div>
 
-    <div class="row g-3 my-4 text-center">
-        <div class="col-6 col-md-3"><div class="card border-0 shadow-sm"><div class="card-body"><div class="fs-4 fw-bold">24</div><div class="small text-muted">Products</div></div></div></div>
-        <div class="col-6 col-md-3"><div class="card border-0 shadow-sm"><div class="card-body"><div class="fs-4 fw-bold">128</div><div class="small text-muted">Sales</div></div></div></div>
-        <div class="col-6 col-md-3"><div class="card border-0 shadow-sm"><div class="card-body"><div class="fs-4 fw-bold">4.8</div><div class="small text-muted">Rating</div></div></div></div>
-        <div class="col-6 col-md-3"><div class="card border-0 shadow-sm"><div class="card-body"><div class="fs-4 fw-bold">2 yrs</div><div class="small text-muted">On Ndago</div></div></div></div>
-    </div>
+    <div class="my-4 text-muted small"><span data-shop-product-count>0</span> products listed on Ndago Market</div>
 
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="h5 fw-bold mb-0">Products from GreenFarm</h2>
-        <select class="form-select form-select-sm w-auto">
-            <option>Newest</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
+        <h2 class="h5 fw-bold mb-0" data-shop-products-title>Products from this shop</h2>
+        <select class="form-select form-select-sm w-auto" data-shop-sort aria-label="Sort shop products">
+            <option value="newest">Newest</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
         </select>
     </div>
 
@@ -135,7 +129,7 @@
         <div class="row g-4">
             <div class="col-md-4"><h5 class="fw-bold">Ndago Market</h5><p class="small text-secondary">Malawi’s local online marketplace.</p></div>
             <div class="col-6 col-md-2"><h6>Shop</h6><ul class="list-unstyled small"><li><a href="../category.html" class="text-secondary text-decoration-none">Categories</a></li></ul></div>
-            <div class="col-6 col-md-2"><h6>Sell</h6><ul class="list-unstyled small"><li><a href="seller-dashboard.html" class="text-secondary text-decoration-none">Dashboard</a></li></ul></div>
+            <div class="col-6 col-md-2"><h6>Sell</h6><ul class="list-unstyled small"><li><a href="../seller-application.html" class="text-secondary text-decoration-none">Become a seller</a></li></ul></div>
             <div class="col-md-4"><h6>Support</h6><ul class="list-unstyled small"><li><a href="#" class="text-secondary text-decoration-none">Help Center</a></li></ul></div>
         </div>
         <hr class="border-secondary my-4">

@@ -6,10 +6,7 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-<main class="container py-5"><h1 class="h3 fw-bold">Product Moderation</h1><p class="text-muted">Available in Phase 6.</p></main>
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/js/storage.js"></script><script src="../assets/js/data.js"></script>
-<script src="../assets/js/utils.js"></script><script src="../assets/js/navigation.js"></script><script src="../assets/js/app.js"></script>
-</body>
-</html>
+<body class="bg-light" data-admin-page="products">
+<div data-admin-navigation></div><main class="container py-4 py-lg-5"><p class="text-primary-custom fw-semibold small mb-1">DEMONSTRATION ADMIN</p><h1 class="h2 fw-bold">Product moderation</h1><p class="text-muted">Review published and draft products. Removing a listing marks it rejected and unavailable; it does not delete seller data.</p><div class="alert alert-warning">Moderation changes are stored in this browser only.</div><div class="alert" data-admin-message hidden></div><div class="card border-0 shadow-sm"><div class="card-body"><label class="visually-hidden" for="adminProductSearch">Search products</label><input id="adminProductSearch" class="form-control mb-3" type="search" placeholder="Search product or seller..." data-admin-product-search><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Product</th><th>Seller</th><th>Category</th><th>Price</th><th>Stock</th><th>Listing / review</th><th></th></tr></thead><tbody data-products-table></tbody></table></div></div></div></main>
+<script src="../assets/js/bootstrap.bundle.min.js"></script><script src="../assets/js/storage.js"></script><script src="../assets/js/data.js"></script><script src="../assets/js/utils.js"></script><script src="../assets/js/app.js"></script><script src="../assets/js/admin.js"></script>
+</body></html>

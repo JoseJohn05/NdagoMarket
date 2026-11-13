@@ -4,197 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - Ndago Market</title>
-    <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body class="bg-secondary-subtle">
-
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">
-            <span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>
-            Ndago <span class="text-primary-custom">Market</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                <li class="nav-item"><a class="nav-link" href="seller/seller-dashboard.html"><i class="bi bi-shop"></i> Sell</a></li>
-                <li class="nav-item">
-                    <a class="nav-link position-relative text-primary-custom" href="cart.html">
-                        <i class="bi bi-cart3 fs-5"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-                    </a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                <li class="nav-item"><a class="btn btn-primary-custom btn-sm px-3" href="register.html">Register</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="container py-4">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
-            <li class="breadcrumb-item active">Shopping Cart</li>
-        </ol>
-    </nav>
-
-    <h1 class="h3 fw-bold mb-4" id="cartPageTitle">Shopping Cart</h1>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"><div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><span class="bg-primary-custom text-white rounded px-2 py-1 me-1">N</span>Ndago <span class="text-primary-custom">Market</span></a>
+    <div class="ms-auto d-flex gap-3 align-items-center"><a href="index.html" class="nav-link">Continue shopping</a><a href="login.html" class="nav-link">Login</a></div>
+</div></nav>
+<main class="container py-4">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Shopping Cart</li></ol></nav>
+    <h1 class="h3 fw-bold mb-4">Shopping Cart</h1>
+    <div id="cartPageMessage" aria-live="polite"></div>
     <div class="row g-4" id="cartPageContent">
-        <div class="col-lg-8">
-            <!-- Item 1 -->
-            <div class="card border-0 shadow-sm mb-3">
-                <div class="card-body">
-                    <div class="row align-items-center g-3">
-                        <div class="col-4 col-sm-3 col-md-2">
-                            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=150&h=150&fit=crop" class="img-fluid rounded" alt="">
-                        </div>
-                        <div class="col">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="mb-1">Fresh Organic Tomatoes (5kg)</h6>
-                                    <small class="text-muted">by GreenFarm • Lilongwe</small>
-                                </div>
-                                <button class="btn btn-sm btn-link text-danger p-0"><i class="bi bi-x-lg"></i></button>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="input-group input-group-sm" style="width:110px;">
-                                    <button class="btn btn-outline-secondary" type="button">−</button>
-                                    <input type="number" class="form-control text-center" value="1" min="1">
-                                    <button class="btn btn-outline-secondary" type="button">+</button>
-                                </div>
-                                <span class="fw-bold text-primary-custom">MK 4,500</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="card border-0 shadow-sm mb-3">
-                <div class="card-body">
-                    <div class="row align-items-center g-3">
-                        <div class="col-4 col-sm-3 col-md-2">
-                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=150&h=150&fit=crop" class="img-fluid rounded" alt="">
-                        </div>
-                        <div class="col">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="mb-1">Classic Cotton Shirt - White</h6>
-                                    <small class="text-muted">by StyleHub • Blantyre</small>
-                                </div>
-                                <button class="btn btn-sm btn-link text-danger p-0"><i class="bi bi-x-lg"></i></button>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="input-group input-group-sm" style="width:110px;">
-                                    <button class="btn btn-outline-secondary" type="button">−</button>
-                                    <input type="number" class="form-control text-center" value="2" min="1">
-                                    <button class="btn btn-outline-secondary" type="button">+</button>
-                                </div>
-                                <span class="fw-bold text-primary-custom">MK 24,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="card border-0 shadow-sm mb-3">
-                <div class="card-body">
-                    <div class="row align-items-center g-3">
-                        <div class="col-4 col-sm-3 col-md-2">
-                            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=150&h=150&fit=crop" class="img-fluid rounded" alt="">
-                        </div>
-                        <div class="col">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6 class="mb-1">White Maize Grain - 50kg</h6>
-                                    <small class="text-muted">by AgroSupply • Kasungu</small>
-                                </div>
-                                <button class="btn btn-sm btn-link text-danger p-0"><i class="bi bi-x-lg"></i></button>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="input-group input-group-sm" style="width:110px;">
-                                    <button class="btn btn-outline-secondary" type="button">−</button>
-                                    <input type="number" class="form-control text-center" value="1" min="1">
-                                    <button class="btn btn-outline-secondary" type="button">+</button>
-                                </div>
-                                <span class="fw-bold text-primary-custom">MK 45,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="index.html" class="text-primary-custom text-decoration-none"><i class="bi bi-arrow-left me-1"></i> Continue Shopping</a>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="card border-0 shadow-sm sticky-top" style="top:80px;">
-                <div class="card-body">
-                    <h5 class="fw-bold mb-3">Order Summary</h5>
-                    <div class="d-flex justify-content-between mb-2">
-                        <span class="text-muted">Subtotal (3 items)</span>
-                        <span class="fw-medium">MK 73,500</span>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <span class="text-muted">Delivery</span>
-                        <span class="text-success">To be confirmed</span>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between mb-4">
-                        <span class="fw-bold">Total</span>
-                        <span class="fw-bold text-primary-custom fs-5">MK 73,500</span>
-                    </div>
-                    <a href="checkout.html" class="btn btn-primary-custom w-100 py-2 btn-outline-success">Proceed to Checkout</a>
-                    <p class="small text-muted text-center mt-3 mb-0">You can arrange delivery or pickup with the sellers after placing the order.</p>
-                </div>
-            </div>
-        </div>
+        <section class="col-lg-8" aria-label="Cart items"><div id="cartItems"></div>
+            <div class="d-flex justify-content-between mt-3"><a href="category.html" class="text-primary-custom text-decoration-none">← Continue shopping</a><button id="clearCart" class="btn btn-sm btn-outline-danger" type="button">Clear cart</button></div>
+        </section>
+        <aside class="col-lg-4"><div class="card border-0 shadow-sm sticky-top" style="top:80px"><div class="card-body">
+            <h2 class="h5 fw-bold mb-3">Order Summary</h2><div class="d-flex justify-content-between mb-2"><span class="text-muted">Subtotal</span><span id="cartSubtotal">MWK 0</span></div>
+            <div class="d-flex justify-content-between mb-3"><span class="text-muted">Delivery</span><span class="text-success">To be arranged</span></div><hr>
+            <div class="d-flex justify-content-between mb-4"><strong>Total</strong><strong id="cartTotal" class="text-primary-custom fs-5">MWK 0</strong></div>
+            <a id="checkoutLink" href="checkout.html" class="btn btn-primary-custom w-100">Proceed to Checkout</a>
+            <p class="small text-muted text-center mt-3 mb-0">Delivery arrangements are selected per seller at checkout. No delivery fees are included.</p>
+        </div></div></aside>
     </div>
-</div>
-
-<footer class="bg-dark text-light pt-5 pb-4">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <h5 class="fw-bold">Ndago <span class="text-success">Market</span></h5>
-                <p class="text-secondary">Connecting local businesses and customers nation-wide through an online marketplace</p>
-            </div>
-
-            <div class="col-6 col-lg-2">
-                <h6>Marketplace</h6>
-                <a href="index.html" class="footer-link">Home</a>
-                 <a href="category.html" class="footer-link">Products</a>
-                  <a href="cart.html" class="footer-link">Shopping cart</a>
-            </div>
-
-            <div class="col-lg-4">
-                <h6>Customer Support</h6>
-                <a href="#" class="footer-link">Help Centre</a>
-                <a href="#" class="footer-link">Terms and Conditions</a>
-            </div>
-        </div>
-
-        <hr class="border-secondary my-4">
-
-        <p class="text-center text-secondary small mb-0">
-            &copy;2026 Ndago Market. All rights reserved.
-        </p>
-    </div>
-</footer>
-
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/storage.js"></script>
-<script src="assets/js/data.js"></script>
-<script src="assets/js/utils.js"></script>
-<script src="assets/js/navigation.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/cart.js"></script>
-
-</body>
-</html>
+</main>
+<footer class="bg-dark text-light py-4 mt-5"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>Ndago Market · Your Market. Your People. All in One Place.</span><a class="text-light" href="index.html">Marketplace</a></div></footer>
+<script src="assets/js/bootstrap.bundle.min.js"></script><script src="assets/js/storage.js"></script><script src="assets/js/data.js"></script><script src="assets/js/utils.js"></script><script src="assets/js/navigation.js"></script><script src="assets/js/app.js"></script><script src="assets/js/cart.js"></script><script src="assets/js/cart-page.js"></script>
+</body></html>

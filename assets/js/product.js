@@ -14,7 +14,12 @@
         const params = new URLSearchParams(window.location.search);
         const productId = params.get("product") || "fresh-organic-tomatoes";
         const product = NdagoData.getProducts().find(function (item) { return item.id === productId; });
-        if (!product) return;
+        if (!product || !NdagoMarketplace.isPublicProduct(product)) {
+            const name = document.getElementById("productName");
+            const view = name && name.closest(".container");
+            if (view) view.innerHTML = '<div class="alert alert-info">This product is not currently listed.</div><a class="btn btn-primary-custom" href="category.html">Browse products</a>';
+            return;
+        }
 
         const seller = NdagoData.getSellers().find(function (item) { return item.id === product.sellerId; });
         const root = document.body.dataset.assetRoot || "";
